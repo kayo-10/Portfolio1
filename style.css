@@ -1,81 +1,64 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
   background-color: #f5f5f5;
 }
 
-.banner-inicial img,
+.banner-principal img,
 .banner-secundario img {
   width: 100%;
-  display: block;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
 }
 
 #camisas-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
-  position: relative;
-  z-index: 1;
+  padding: 20px;
 }
 
 .camisa {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width: 200px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 10px;
   text-align: center;
-  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .camisa img {
   width: 100%;
-  border-radius: 8px;
+  height: 220px;
+  object-fit: contain;
+  margin-bottom: 10px;
 }
 
 .camisa h3 {
   font-size: 16px;
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
 
 .botao-comprar {
-  background-color: #28a745;
-  border: none;
+  background-color: #000;
   color: white;
-  padding: 8px 12px;
-  border-radius: 5px;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
   cursor: pointer;
-  margin-top: 10px;
+  font-size: 14px;
 }
 
-.botao-comprar i {
-  margin-right: 5px;
+.botao-comprar:hover {
+  background-color: #333;
 }
 
 .banner-secundario {
-  width: 100%;
-  margin: 20px 0;
+  grid-column: 1 / -1;
 }
 
-.info-final {
-  padding: 20px;
-  background: #eee;
-  text-align: center;
-}
-
-.faq-item {
-  margin: 10px 0;
-  cursor: pointer;
-}
-
-.faq-item.open .faq-pergunta {
-  font-weight: bold;
-}
-
-/* Fundo animado */
-#backgroundCanvas {
+canvas#backgroundCanvas {
   position: fixed;
   top: 0;
   left: 0;
