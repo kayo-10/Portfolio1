@@ -1,1 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
 
+.banner-inicial img,
+.banner-secundario img {
+  width: 100%;
+  display: block;
+}
+
+#camisas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.camisa {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 200px;
+  text-align: center;
+  padding: 15px;
+}
+
+.camisa img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.camisa h3 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.botao-comprar {
+  background-color: #28a745;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.botao-comprar i {
+  margin-right: 5px;
+}
+
+.banner-secundario {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.info-final {
+  padding: 20px;
+  background: #eee;
+  text-align: center;
+}
+
+.faq-item {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.faq-item.open .faq-pergunta {
+  font-weight: bold;
+}
+
+/* Fundo animado */
+#backgroundCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
